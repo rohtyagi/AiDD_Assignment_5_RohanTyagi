@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rohan Tyagi — Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Personal website of Rohan Tyagi showcasing bio, resume, projects, and contact information.">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="index.html">Rohan Tyagi</a>
+            <nav class="site-nav" aria-label="Primary">
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Hello, I'm <span class="accent">Rohan Tyagi</span>.</h1>
+                <p class="lead">MSIS student at Indiana University, blending analytics, automation, and user-centered design to deliver measurable impact.</p>
+                <div class="cta-group">
+                    <a class="button primary" href="projects.html">View Projects</a>
+                    <a class="button" href="resume.html">See Resume</a>
+                </div>
+            </div>
+            <div class="hero-media">
+                <img src="images/headshot.jpg" alt="Headshot of Rohan Tyagi">
+            </div>
+        </section>
+
+        <section class="features" aria-label="Highlights">
+            <div class="feature">
+                <h2>What I Do</h2>
+                <p>Build Power Apps, dashboards, and data solutions that replace manual workflows and inform decisions.</p>
+            </div>
+            <div class="feature">
+                <h2>Recent Roles</h2>
+                <p>Tech Advisory Consultant Intern at Cherry Bekaert and IT Project Management Intern at HCA Healthcare.</p>
+            </div>
+            <div class="feature">
+                <h2>Contact</h2>
+                <p><a href="mailto:rohtyagi@iu.edu">rohtyagi@iu.edu</a> · <a href="https://linkedin.com/in/rohanvtyagi" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://github.com/rohtyagi" target="_blank" rel="noopener">GitHub</a></p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>© <span id="year"></span> Rohan Tyagi</p>
+            <p><a href="https://github.com/rohtyagi" target="_blank" rel="noopener">GitHub</a> · <a href="https://linkedin.com/in/rohanvtyagi" target="_blank" rel="noopener">LinkedIn</a></p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
+
+

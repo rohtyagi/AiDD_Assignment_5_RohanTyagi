@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About — Rohan Tyagi</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="index.html">Rohan Tyagi</a>
+            <nav class="site-nav" aria-label="Primary">
+                <ul>
+                    <li><a href="about.html" aria-current="page">About</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <article class="content-two-col">
+            <div>
+                <h1>About Me</h1>
+                <p>
+                    I'm a Master of Science in Information Systems student at Indiana University, with a B.S. in
+                    Information Technology (Highest Distinction). I enjoy applying analytics, automation, and
+                    human‑centered design to streamline workflows and support better decisions.
+                </p>
+                <p>
+                    Recently, I built Power Apps to digitize inspections and operations, delivered Power BI dashboards
+                    for executive forecasting, and created reusable design systems to scale consistent, branded solutions.
+                    I also support students as a Graduate Assistant for Business Analytics and Modeling, focusing on
+                    descriptive, predictive, and prescriptive techniques.
+                </p>
+                <p>
+                    Outside of class and work, I’m relearning piano, volunteering as an instructor, and staying curious
+                    about product design and technology ethics.
+                </p>
+                <p>
+                    Contact: <a href="mailto:rohtyagi@iu.edu">rohtyagi@iu.edu</a> · <a href="https://linkedin.com/in/rohanvtyagi" target="_blank" rel="noopener">LinkedIn</a>
+                </p>
+            </div>
+            <figure class="about-photo">
+                <img src="images/headshot.jpg" alt="Headshot of Rohan Tyagi smiling in front of a bright lobby with plants">
+                <figcaption>Always learning, always iterating.</figcaption>
+            </figure>
+        </article>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>© <span id="year"></span> Rohan Tyagi</p>
+            <p><a href="index.html">Home</a></p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
+
+

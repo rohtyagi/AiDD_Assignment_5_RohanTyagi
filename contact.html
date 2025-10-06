@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact — Rohan Tyagi</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="index.html">Rohan Tyagi</a>
+            <nav class="site-nav" aria-label="Primary">
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html" aria-current="page">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1>Contact</h1>
+        <p>You can reach me at <a href="mailto:rohtyagi@iu.edu">rohtyagi@iu.edu</a> · <a href="https://linkedin.com/in/rohanvtyagi" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://github.com/rohtyagi" target="_blank" rel="noopener">GitHub</a> or via the form below.</p>
+
+        <form id="contactForm" novalidate>
+            <div class="field">
+                <label for="firstName">First Name</label>
+                <input id="firstName" name="firstName" type="text" required>
+                <div class="error" id="firstNameError" aria-live="polite"></div>
+            </div>
+            <div class="field">
+                <label for="lastName">Last Name</label>
+                <input id="lastName" name="lastName" type="text" required>
+                <div class="error" id="lastNameError" aria-live="polite"></div>
+            </div>
+            <div class="field">
+                <label for="email">Email Address</label>
+                <input id="email" name="email" type="email" required pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$">
+                <div class="error" id="emailError" aria-live="polite"></div>
+            </div>
+            <div class="field">
+                <label for="password">Password</label>
+                <input id="password" name="password" type="password" required minlength="8">
+                <div class="error" id="passwordError" aria-live="polite"></div>
+            </div>
+            <div class="field">
+                <label for="confirmPassword">Confirm Password</label>
+                <input id="confirmPassword" name="confirmPassword" type="password" required minlength="8">
+                <div class="error" id="confirmPasswordError" aria-live="polite"></div>
+            </div>
+            <button type="submit" class="button primary">Send</button>
+        </form>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>© <span id="year"></span> Rohan Tyagi</p>
+            <p><a href="index.html">Home</a></p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        const form = document.getElementById('contactForm');
+        const firstName = document.getElementById('firstName');
+        const lastName = document.getElementById('lastName');
+        const email = document.getElementById('email');
+        const password = document.getElementById('password');
+        const confirmPassword = document.getElementById('confirmPassword');
+
+        function showError(input, message) {
+            const errorEl = document.getElementById(input.id + 'Error');
+            errorEl.textContent = message || '';
+        }
+
+        function clearErrors() {
+            ['firstName','lastName','email','password','confirmPassword'].forEach(id => showError({ id: id }, ''));
+        }
+
+        form.addEventListener('submit', function (e) {
+            clearErrors();
+            let valid = true;
+
+            if (!firstName.value.trim()) { showError(firstName, 'First name is required.'); valid = false; }
+            if (!lastName.value.trim()) { showError(lastName, 'Last name is required.'); valid = false; }
+
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!email.value.trim()) { showError(email, 'Email is required.'); valid = false; }
+            else if (!emailPattern.test(email.value)) { showError(email, 'Enter a valid email address.'); valid = false; }
+
+            if (!password.value) { showError(password, 'Password is required.'); valid = false; }
+            else if (password.value.length < 8) { showError(password, 'Password must be at least 8 characters.'); valid = false; }
+
+            if (!confirmPassword.value) { showError(confirmPassword, 'Please confirm your password.'); valid = false; }
+            else if (confirmPassword.value !== password.value) { showError(confirmPassword, 'Passwords do not match.'); valid = false; }
+
+            if (!valid) {
+                e.preventDefault();
+                return;
+            }
+
+            e.preventDefault();
+            window.location.href = 'thankyou.html';
+        });
+    </script>
+</body>
+</html>
+
+

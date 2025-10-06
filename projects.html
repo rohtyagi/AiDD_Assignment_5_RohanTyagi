@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects — Rohan Tyagi</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="index.html">Rohan Tyagi</a>
+            <nav class="site-nav" aria-label="Primary">
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="projects.html" aria-current="page">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1>Projects</h1>
+        <section class="project-grid">
+            <article class="project">
+                <img src="images/data_computers.svg" alt="Abstract illustration of databases, queries, and computers connected with data flows">
+                <div class="project-body">
+                    <h2>i308 Final Project — Web Database System</h2>
+                    <p>Team project building a complete database system: ERD design, logical modeling, MySQL implementation, query development, and a PHP/HTML web interface for an imaginary small business.</p>
+                    <div class="tags">
+                        <span class="tag">MySQL</span>
+                        <span class="tag">ERD</span>
+                        <span class="tag">PHP</span>
+                        <span class="tag">Web App</span>
+                    </div>
+                    <p>
+                        <a href="https://github.com/rtyagi617/i308_Final_Project/tree/main" target="_blank" rel="noopener">Repository</a>
+                    </p>
+                </div>
+            </article>
+            <article class="project">
+                <img src="images/spotify_data.svg" alt="Illustration of Spotify data analysis with charts and tracks">
+                <div class="project-body">
+                    <h2>i210 Mastery Project 2 — Spotify Data Analysis</h2>
+                    <p>Analyzed ~1,000 2022 Spotify tracks using Python: cleaned CSV data, implemented selection/insertion sort, printed formatted tables, and built a CLI menu for top‑track analysis by audio features.</p>
+                    <div class="tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">CSV</span>
+                        <span class="tag">Sorting</span>
+                        <span class="tag">CLI</span>
+                    </div>
+                    <p><a href="https://github.com/rtyagi617/i210_Mastery_Project2" target="_blank" rel="noopener">Repository</a></p>
+                </div>
+            </article>
+            
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>© <span id="year"></span> Rohan Tyagi</p>
+            <p><a href="index.html">Home</a></p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
+
+
