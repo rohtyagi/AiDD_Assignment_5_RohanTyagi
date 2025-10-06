@@ -5,7 +5,7 @@ This project involves creating a personal multi-page website that highlights you
 
 Features - 
 Responsive Design: Works seamlessly across desktop and mobile devices.
-Semantic HTML Structure: Uses <header>, <nav>, <main>, and <footer> elements.
+Semantic HTML Structure: Uses header, nav, main, and footer elements.
 Consistent Styling: All pages share a unified color scheme, font, and layout.
 Interactive Form: Includes validation for required fields and password checks.
 Accessibility: Proper label and id linking, alt text for images, and error handling.
